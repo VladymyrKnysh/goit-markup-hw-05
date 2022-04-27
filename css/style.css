@@ -104,6 +104,7 @@ ul{
 }
 
 .nav-link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -126,6 +127,16 @@ ul{
 }
 .nav-link.current {
   color: var(--accent-color);
+}
+.nav-link.current::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  background-color: var(--accent-color);
+  height: 4px;
+  display: block;
+  border-radius: 2px;
 }
 /* ------------------contacts ------------*/
 .contacts{
@@ -312,8 +323,26 @@ color: var(--secondary-text-color);
 .cut {
   padding-top: 0;
 }
-
-
+.thumb-works {
+  position: relative;
+}
+.text {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
 
 /* --------------------------Команда---------------------------- */
 .team{
@@ -564,9 +593,11 @@ address {
   margin: -15px;
 }
 
-.work-item{
+.work-item {
+  position: relative;
 margin: 15px;
 width: 370px; 
+
 }
 .work-link {
   text-decoration: none;
@@ -607,5 +638,22 @@ width: 370px;
   1px 4px 6px rgba(0, 0, 0, 0.16);
   
 }
-
+.work-modal {
+  position: absolute;
+  z-index: 2;
+  top: 294px;
+ padding: 63px 24px;
+  width: 100%;
+  height: 294px;
+  background: rgba(33, 150, 243, 0.9);
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: var(--white-color);
+  opacity: 1;
+ 
+}
 
