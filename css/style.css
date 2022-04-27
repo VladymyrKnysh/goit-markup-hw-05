@@ -14,7 +14,9 @@
   --secondary-white-color: rgba(255, 255, 255, 0.6);
   --grey-bg-color: #F5F4FA;
   --icon-primary-color: #AFB1B8;
+  --cubic-bezier: cubic-bezier(.04, 0, .2, 1);
 }
+cubic-bezier(.04, 0, .2, 1)
 
 body {
   background-color: var(--white-bg-color);
@@ -112,7 +114,12 @@ ul{
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--accent-color);
@@ -120,7 +127,7 @@ ul{
 .nav-link.current {
   color: var(--accent-color);
 }
-/* ------------------contacts list ------------*/
+/* ------------------contacts ------------*/
 .contacts{
   display: flex;
   margin-left: auto;
@@ -144,16 +151,21 @@ ul{
   line-height: 1.14;
   letter-spacing: 0.02em;
   fill: currentColor;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
+
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--accent-color);
-  /* fill: var(--accent-color); */
+ 
 }
 
 .contacts-icon {
   margin-right: 10px;
-  /* fill: var(--secondary-text-color); */
+  
 }
 /* --------------------Hero----------------------------------------- */
 .hero {
@@ -302,6 +314,7 @@ color: var(--secondary-text-color);
 }
 
 
+
 /* --------------------------Команда---------------------------- */
 .team{
   display: flex;
@@ -361,6 +374,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 fill: var(--icon-primary-color);
+
+transition-property: background-color fill;
+transition-duration: 250ms;
+transition-timing-function: var(--cubic-bezier);
+
 }
 
 .team-soc-link:hover,
@@ -393,6 +411,9 @@ fill: var(--icon-primary-color);
   align-items: center;
   background-color: var(--white-bg-color);
   fill: var(--icon-primary-color);
+  transition-property: fill border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
   
 }
 .company-link:hover,
@@ -426,6 +447,10 @@ address {
   font-size: 14px;
   line-height: 1.7;
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 .address-map:hover,
 .address-map:focus {
@@ -436,11 +461,17 @@ address {
   text-decoration: none; 
   font-size: 14px;
   line-height: 1.7;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
+
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
 }
+/* -------------------присоединяйтесь --------*/
 .box {
   display: flex;
   align-items: baseline;
@@ -476,6 +507,10 @@ address {
   background-color: rgba(255,255,255,0.1);
   fill: var(--white-color);
 
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+
 }
 .thumb-link:hover,
 .thumb-link:focus {
@@ -506,7 +541,11 @@ address {
   cursor: pointer;
   border: transparent;
   padding: 6px 22px;
+  transition-property: background-color color box-shadow ;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
+
 .filter-button:hover,
 .filter-button:focus {
   background-color: var(--accent-color);
@@ -532,6 +571,10 @@ width: 370px;
 .work-link {
   text-decoration: none;
   display: block;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 .work-name{
   padding: 20px 24px;
